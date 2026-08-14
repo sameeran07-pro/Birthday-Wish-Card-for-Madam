@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 25px;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #ffd6e8, #e6d5ff, #cfefff);
+  overflow-x: hidden;
+}
+
+.card {
+  width: min(700px, 100%);
+  text-align: center;
+  padding: 45px 35px;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 15px 45px rgba(126, 77, 130, 0.25);
+  backdrop-filter: blur(8px);
+  animation: appear 1s ease-out;
+}
+
+.sparkles {
+  color: #c05d9a;
+  font-size: 1.4rem;
+  letter-spacing: 12px;
+  margin-bottom: 5px;
+}
+
+.cake {
+  font-size: 5rem;
+  animation: bounce 2s infinite ease-in-out;
+}
+
+h1 {
+  color: #773d73;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  margin: 10px 0;
+}
+
+h1 span {
+  font-family: "Great Vibes", cursive;
+  color: #e14c8d;
+  font-size: 1.25em;
+}
+
+.subtitle {
+  color: #885878;
+  font-size: 1.05rem;
+  margin-bottom: 25px;
+}
+
+.message-box {
+  color: #684a66;
+  line-height: 1.8;
+  padding: 18px 22px;
+  border-radius: 18px;
+  background: #fff8fc;
+  box-shadow: inset 0 0 0 1px #f6d5e6;
+}
+
+button {
+  margin-top: 28px;
+  padding: 13px 24px;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #e95094, #a361d8);
+  color: white;
+  font: 600 1rem "Poppins", sans-serif;
+  cursor: pointer;
+  box-shadow: 0 8px 16px rgba(186, 67, 138, 0.3);
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+button:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 12px 20px rgba(186, 67, 138, 0.4);
+}
+
+#surpriseWish {
+  min-height: 30px;
+  margin: 18px 0 0;
+  color: #c3397c;
+  font-weight: 600;
+}
+
+.balloons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 25px;
+  font-size: 2.4rem;
+}
+
+.balloons span:nth-child(1),
+.balloons span:nth-child(3) {
+  animation: float 2.3s infinite ease-in-out;
+}
+
+.balloons span:nth-child(2),
+.balloons span:nth-child(4) {
+  animation: float 2.3s 0.5s infinite ease-in-out;
+}
+
+.footer {
+  color: #9b6688;
+  margin: 20px 0 0;
+  font-size: 0.9rem;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(-5deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(5deg);
+  }
+}
